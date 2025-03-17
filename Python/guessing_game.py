@@ -35,6 +35,8 @@ while playagain.lower() == 'yes':
 	while winlose not in ('win','lose'):
 		if int(guess) < answer and answer > 0:
 			print("NOPE! Too low.")
+			if turn == difficulty['guesses']:
+				print("This is your last guess, choose carefully!")
 			if turn > difficulty['guesses']:
 				winlose = "lose"
 				break
@@ -43,6 +45,8 @@ while playagain.lower() == 'yes':
 			turn += 1
 		elif int(guess) > answer and answer < difficulty['range'] - 1:
 			print("NO WAY! Too high!")
+			if turn == difficulty['guesses']:
+				print("This is your last guess, choose carefully!")
 			if turn > difficulty['guesses']:
 				winlose = "lose"
 				break
