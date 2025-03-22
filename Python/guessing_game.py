@@ -37,6 +37,7 @@ while playagain.lower() == 'yes':
 			print("NOPE! Too low.")
 			if turn == difficulty['guesses']:
 				print("This is your last guess, choose carefully!")
+				time.sleep(1)
 			if turn > difficulty['guesses']:
 				winlose = "lose"
 				break
